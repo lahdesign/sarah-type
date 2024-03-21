@@ -1,0 +1,189 @@
+
+
+@font-face {
+    src: url("./fonts/FormaDJRVariableNormal[opsz\,slnt\,wght]-Edu.woff2") format("woff2"),
+         url('fonts/Kalnia-VariableFont_wdth\,wght.ttf') format('truetype');
+
+    font-family: 'Kalnia';
+    font-style: normal;
+    font-weight: normal;
+    }
+    
+    body{
+    background-color: #FFEDC9;
+    font-family: 'Kalnia';
+    overflow-x: hidden;
+
+}
+/* how the page wrapper will appear on mobile */
+.page-wrapper{
+    width: min(100% - 3rem, 80ch);
+    margin-inline: auto;
+}
+/* how the page wrapper appears on desktop */
+
+/*\ @media only screen and (min-width:800px){
+.page-wrapper{
+display: grid;
+grid-gap: 25px;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto;
+grid-template-areas: 
+    "h v"
+    "a a";
+} */
+
+#history {
+margin-bottom: 200px;
+color: #58300C;
+}
+
+#variations{
+    color: #58300C;
+}
+
+#alphabet {
+    color: #58300C;
+
+}
+
+/* CSS for the footer */
+footer{
+background-color: #F7C190;    
+  }
+
+  .footer-wrapper {
+    /*wrap the full width of page */
+    width:100%;
+    /* so i can use css grid */
+    display: grid;
+    grid-gap: 3px;
+    /* space around the whole box */
+    padding:10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        ". . . . . . . t t t . ."
+        ". f f f . . . t t t . ."
+        ". . . . . . . t t t . .";
+}
+
+.font-name {
+    grid-area: f;
+    color: white;
+    
+}
+
+.text-wrapper{
+  grid-area: t;
+  color: white;
+}
+
+
+
+/* variable font animation */
+h3{
+    font-weight:20; 
+    text-align: center;
+    font-size: 13em;
+    margin-top: 130px;
+    margin-left: -20px;
+    animation: weightChange 7s infinite;
+    color: #F49F51;
+}
+h1{
+    font-size: 30px;
+    font-variation-settings: "wght" 700, "wdth" 100;
+    margin-left: -35px;
+    
+}
+h2{
+    font-size: 30px;
+    font-variation-settings: "wght" 700, "wdth" 100;
+    text-align: right;
+   
+}
+h5{
+    font-size: 30px;
+    font-variation-settings: "wght" 700, "wdth" 100;
+    text-align: left;
+    margin-left: -20px;
+    margin-top: -57px;
+
+   
+}
+
+
+p{
+    font-size: 20px;
+}
+
+#two{
+    font-size: 25px;
+    margin-bottom: 100px;
+    margin-top: -100px;
+    background-color: rgba(255, 255, 255, 0.722);
+    border-style: solid;
+    border-color:#C19B79;
+    display: block;
+    height: 130px;
+    width: 50%;
+    text-align: center;
+    border-width: 4px;
+}
+#three{
+    font-size: 25px;
+    margin-left: 275px;
+    margin-top:-90px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.722);
+    border-style: solid;
+    border-color:#C19B79;
+    display: block;
+    height: 130px;
+    width: 50%;
+    border-width: 4px;
+    
+}
+#four{
+    font-size: 25px;
+    margin-left: 275px;
+    margin-top:-90px;
+    text-align: center;
+  
+}
+
+@keyframes weightChange {
+    0%, 100%{
+        font-variation-settings: "wght" 200, "wdth" 100;
+    }
+    50%{ font-variation-settings: "wght" 500, "wdth" 100;
+    }
+    }
+    
+/* variable font that changes on hover */
+.variable-font{
+    font-weight:1 ;
+    height:100vh;
+    font-size: 50em;
+    display:grid;
+    place-content: center;
+    margin: 0;
+    text-align: center;
+    font-variation-settings: "wght" 40, "wdth" 0, "XXXX" 1;
+    transition: 
+        font-weight 500ms,
+        font-variation-settings 3s;
+}
+
+.variable-font:hover{
+    font-weight:500 ;
+    height:100vh;
+    font-size: 7em;
+    display:grid;
+    place-content: center;
+    margin: 0;
+    text-align: center;
+    font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
+}
+
